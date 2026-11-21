@@ -7,6 +7,7 @@ import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.bluetooth.BluetoothAdapter;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -20,6 +21,12 @@ import org.json.JSONObject;
 
 /** Hosts the game (assets/index.html) full-screen in a WebView. The game runs fully offline. */
 public class MainActivity extends Activity {
+    private static final int ICON_COUNT = 10;                       // v6.4: activity-aliases Icon0..Icon9 in the manifest
+
+    private ComponentName iconComponent(int i) {
+        return new ComponentName(this, "com.cluckload.game.Icon" + i);
+    }
+
 
     private WebView web;
     private LanLink lan;
@@ -43,6 +50,10 @@ public class MainActivity extends Activity {
         web.setHorizontalScrollBarEnabled(false);
         web.setLongClickable(false);
         web.setHapticFeedbackEnabled(false);
+        // v6.2: nothing in this app caps the CPU (no sustained-performance mode, no throttling); these only ask Android to treat the game like a game
+        web.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+        if (Build.VERSION.SDK_INT >= 26) web.setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, true);   // keep the web renderer at foreground priority while the game is shown
+        try { android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_DISPLAY); } catch (Throwable t) { /* ignore */ }
 
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
@@ -63,6 +74,41 @@ public class MainActivity extends Activity {
         public void setOrientation(final int mode) {
             runOnUiThread(() -> setRequestedOrientation(mode == 1 ? ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
                     : mode == 2 ? ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT : ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR));
+        }
+
+        /** v6.3: "YES, EXIT" on the main menu: closes the game and removes it from the recent apps. */
+        @JavascriptInterface
+        public void exitApp() {
+            runOnUiThread(() -> {
+                if (Build.VERSION.SDK_INT >= 21) finishAndRemoveTask(); else finish();
+            });
+        }
+
+        /** v6.4: which launcher icon is active (0-9). The aliases Icon0..Icon9 in the manifest each have one icon; exactly one is enabled. */
+        @JavascriptInterface
+        public int getIcon() {
+            try {
+                PackageManager pm = getPackageManager();
+                for (int i = 0; i < ICON_COUNT; i++) {
+                    int st = pm.getComponentEnabledSetting(iconComponent(i));
+                    if (st == PackageManager.COMPONENT_ENABLED_STATE_ENABLED || (st == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT && i == 0)) return i;
+                }
+            } catch (Exception e) { }
+            return 0;
+        }
+
+        /** v6.4: Settings > App icon. Turns the chosen alias on first, then the others off, without killing the game. */
+        @JavascriptInterface
+        public boolean setIcon(final int n) {
+            if (n < 0 || n >= ICON_COUNT) return false;
+            try {
+                PackageManager pm = getPackageManager();
+                pm.setComponentEnabledSetting(iconComponent(n), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+                for (int i = 0; i < ICON_COUNT; i++) {
+                    if (i != n) pm.setComponentEnabledSetting(iconComponent(i), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+                }
+                return true;
+            } catch (Exception e) { return false; }
         }
 
         @JavascriptInterface

@@ -86,6 +86,103 @@ Beating a boss heals you and gives a reward pick with better rarity odds.
 Beating **King Cluck** shows the **VICTORY ending** (+300 coins, achievement "King of the Coop"),
 then you choose **KEEP FIGHTING** (endless mode - waves never stop, achievement "No End in Sight" at wave 60) or **FINISH RUN**.
 
+## New in 7.2 - NO RED DOTS, LEGLESS ICONS, MOD MENU UNLOCKS EVERYTHING
+
+- The red notification dots are gone from the whole game (main menu, shop, goals, library tabs, event shop). They never went away before.
+- The 10 app icons were redrawn without the hens' legs (Android launcher drawables updated too).
+- MUTATION RUN: the mutator descriptions shown at the start of each wave now wrap into 2-3 lines and the title is fitted, so nothing leaves its frame on any screen size. All pop-up notifications use the same layout.
+- MOD MENU: new UNLOCK EVERYTHING button plus separate buttons - MAX ALL WEAPON MODS (barrel / sight / magazine level 3 on all 8 weapons), MAX HEN LEVELS (level 20 and 20 talent points for every hen), MAX ALL PETS, UNLOCK LIBRARY (all bosses beaten, all story chapters and bestiary entries), UNLOCK RUNNER (all run skins and locations); MAX ALL UPGRADES now fills HEAD START too; coin buttons up to +10,000,000. In a run the panel got ALL WEAPONS (unlock + ammo) and +10,000 COINS.
+- Mod menu cards (BOSS FIGHT, START WAVE, SLOW MOTION, FORCE EVENT) no longer overlap text on narrow screens.
+- 21 new texts translated into all 17 languages.
+
+## New in 7.1 - BESTIARY, CUTSCENES and the MEDAL GALLERY
+
+- LIBRARY now has three tabs: STORY (the lore chapters, now 14 with the two new bonus chapters THE DROWNED SHARD and GHOST IN THE FENCE, each with its own picture), BESTIARY and GALLERY.
+- BESTIARY: a picture, short description and stats (health, speed, damage, size) for the 6 enemy types and all 13 bosses. An entry unlocks the first time you meet it (the card shows ??? until then), then shows the wave you first met it in and how many you defeated. Tap an entry to expand it; new entries get a NEW tag and a menu badge. Progress is saved and goes through the save code.
+- CUTSCENES: the first time you open a story chapter a short animated scene plays (moving picture, drifting particles, typed-out text). Tap or BACK skips it; each scene is shown once and remembered.
+- GALLERY: every achievement now has its own medal drawing in bronze / silver / gold / crystal tiers. Locked medals are dark; tap a medal to see how to earn it and its reward.
+- 36 new texts translated into all 17 languages.
+
+## New in 7.0 - SUNKEN REEF, CYBER FARM and the BOSS OF THE DAY
+
+- Two new biomes in the 70-wave cycle: SUNKEN REEF (waves 61-65, underwater: currents push you and the bullets, bubbles rise, coral and seaweed) and CYBER FARM (waves 66-70, circuit-board floor, digital rain, sweeping laser firewalls with a gap to run through). Waves 1-60 are unchanged, wave 71 starts the cycle again.
+- Two new bosses: ADMIRAL SQUAWKTOPUS (wave 65: ink, whirlpool, homing bubbles, phase 2 "THE TIDE RISES!") and CLUCK.EXE (wave 70: firewall walls, glitch, beams, phase 2 "SYSTEM OVERLOAD!"). Own music for both biomes and both boss fights.
+- Boss Rush, the lore epilogue and the "beat every boss" achievement still use the original 11 bosses; the new ones are optional extras.
+- Two new achievements: DEEP DIVER (wave 61) and GLITCH IN THE COOP (wave 66).
+- BOSS OF THE DAY (CHALLENGES screen, first card): every day has one boss, a threat tier 1-3 and two fixed mutators (one bad, one good). Same rules for everyone: hen CLUCK, no upgrades, pets or talents, all weapons loaded. First clear of the day pays coins plus a streak bonus; best time per boss is kept; clearing it again pays a small consolation prize. A boss-of-the-day run never touches the normal save, unlocks or leaderboard.
+- The boss intro tip is now drawn under the health bar (it overlapped the bar on small landscape screens).
+- 26 new texts translated into all 17 languages.
+- The Android Java code is unchanged in 7.0; only the bundled game file and the version changed.
+
+## New in 6.9 - WEAPON MODS and the HEN TALENT TREE
+- SHOP now has two tabs: UPGRADES and WEAPON MODS. Every one of the 8 weapons has three mods with 3 levels each:
+  BARREL (+8% damage, +5% range per level), SIGHT (12% tighter spread, +2.5% crit per level),
+  MAGAZINE (ammo crates give 15% more per level; for the pistol, which has endless ammo, +6% fire rate instead).
+  Prices rise with level and with weapon tier (200 / 520 / 1100 coins at the base price).
+- Every hen earns XP in each run (15 + 8 per wave + kills/8 + 20 per boss); level 1..20, one talent point per level.
+  The new TALENTS tab (next to HENS / WARDROBE / PETS) has a tree of 3 branches (OFFENCE / DEFENCE / UTILITY)
+  with 4 talents and 3 ranks each. A talent opens when its branch holds 2 points per step above it.
+  RESET TALENTS costs 200 coins (tap twice). Each hen keeps her own tree.
+- Talents and mods work in every run (also in co-op, where the loadout is cleaned by the host), but NOT in duels.
+- Save codes carry talents, hen XP and weapon mods; imported codes are cut down to the legal limits.
+- 48 new texts translated into all 17 languages.
+
+## New in 6.8 - MUTATION RUN (CHALLENGES screen)
+
+* A new mode at the top of **CHALLENGES**: every wave rolls random **mutators**. 1 mutator up to wave 9, 2 from wave 10, 3 from wave 25. They are shown as coloured chips under your health panel (red = bad, blue = good).
+* 10 mutators. Bad: HORDE, HEAVY HITTERS (+40% enemy health), TURBO (enemies +25% speed), IRON CHICKEN (no healing), FRAGILE (+80% damage taken), LEAN TIMES (far fewer drops). Good: GOLD RUSH (coins x2), HEARTY MEAL (healing x2), LOOT RAIN (far more drops), SLUGGISH FOES (enemies -25% speed). Opposite pairs never appear together.
+* Every **3rd wave drops a MUTATOR CRATE** with a random reward: coins (about 60%), coin boost x1.5 / x2 / x3 for 3 waves (18%), a weapon with ammo (14%), full heal (7%), a **wardrobe item with 1% chance**, and a **pet with 0.00001 chance** (1 in 100 000). If everything is already owned the crate pays coins instead (a maxed pet collection levels a pet up first).
+* A mutation run is not auto-saved, does not enter the leaderboard and does not erase a saved classic run. The card shows your best wave and the number of crates opened.
+* No Java / manifest change in this version.
+
+## New in 6.7 - CLUCK RUN: 8 locations with their own music
+
+* **8 locations**, each lasts about **4.5 minutes** of running: Sunny Farm, Sunset Orchard, Moonlit Fields, Ember Valley, Frozen Lake, Spooky Swamp, Desert Canyon and Neon City. After the last one the cycle starts again. The sky, ground, road, sun/stars and the roadside scenery (pines, crystals, lava rocks, cacti, mushrooms, reeds, lamps, lit towers...) fade smoothly into the next place during the last 8 seconds.
+* **8 different songs** (one per location). Every song changes every phrase (second melody, higher octave, breakdown, drum fill), so 4.5 minutes do not sound like a short loop.
+* A **LOCATION banner** shows the name when you enter a place. Reaching a new location for the first time gives **+50 coins**.
+* **Start location picker** in the CLUCK RUN hub (arrows under START RUN). A location is open once you have reached it in a run, or when your best distance is high enough (600 / 1200 / 1900 / 2700 / 3600 / 4600 / 5800 m for locations 2-8).
+* The DAILY RUN and the RUN DUEL always start at Sunny Farm; the track itself is not changed, so the network version stays 6.6 (6.6 and 6.7 phones can still race each other).
+* No Java / manifest change in this version.
+
+## New in 6.6 - CLUCK RUN duel (Wi-Fi / Bluetooth)
+
+* **RUN DUEL:** two phones, one track, whoever runs farther wins. Open **CLUCK RUN > RUN DUEL > PLAY** (the same "play with a friend" screen as co-op: Wi-Fi or Bluetooth, PIN), then the host taps **RUN DUEL**. Both phones get the same random seed, so the obstacles are identical; a 3-2-1 countdown starts the race.
+* You see your friend as a translucent hen (with name tag) on your own road and a "+12 m / -12 m" strip at the top. When one of you is caught the other keeps running; the farther distance wins. Winner +40 coins, draw +20, loser +10 (leaving the race = loss, no bonus). The host can start a **REMATCH** with a new track; wins/losses/draws are shown on the CLUCK RUN screen.
+* No pause during a duel (Back or the pause button asks "LEAVE THE RACE?"); if the link drops the other player wins.
+* The network version number is now 6.6: both phones need the same version.
+
+## New in 6.5 - CLUCK RUN: jetpack, skins, daily run
+
+* **Menu > PLAY > CLUCK RUN** now opens a hub: **START RUN**, **DAILY RUN**, your best/runs/coins and the **RUN SKINS** shop.
+* **Jetpack** (new pick-up next to magnet, shield and x2): 6 seconds of flight above everything, a trail of air coins, +28% speed and a safe landing (1.5 s invulnerable).
+* **Run skins** (8): Farm Hen (your chosen hen), Sprinter, Astronaut, Knight, Pirate, Robo-Hen (bought with coins), Chef Hen (finish 5 daily runs) and Golden Hen (reach 1500 m).
+* **Daily run:** one track for the whole world per UTC day (seed from the date), retry as often as you like, the first run of 100 m or more each day pays 40 + 10 x streak coins (streak capped at 10), best of the day is shown.
+* The track generator no longer depends on how the player plays (speed, timing, jetpack): two players with the same seed see exactly the same obstacles. Scenery has its own random stream. (Needed for the run duel in 6.6.)
+
+## New in 6.4 - App icon
+
+* **Settings > APP ICON:** ten icons to choose from (Classic, Sheriff, Sunrise, Cyber, Astronaut, Golden Egg, Ninja, Diver, Inferno, Winter). In the Android app the choice changes the launcher icon at once (Android adaptive icons, so they follow the shape your launcher uses).
+* How it works: the manifest has ten `activity-alias` entries `Icon0`..`Icon9`, only one is enabled; `CluckNative.setIcon(n)` / `getIcon()` switch and read them with `PackageManager.setComponentEnabledSetting` (no restart). The art is one list of shapes (`APP_ICONS` in the game, `app/src/main/res/drawable/ic_launcher_bg_N / fg_N`), so the picker and the real icons match.
+* Some launchers need a few seconds (or a long-press refresh) to show the new icon; the home-screen shortcut you already have may stay as it was on a few launchers.
+* In a browser the choice is only saved (a toast says it can be changed in the Android app).
+
+## New in 6.3 - Easier to use
+
+* **"Do you really want to exit?"** - Back on the main menu (and Esc) opens YES, EXIT / NO, STAY. Back again closes it. The app only closes on YES (`CluckNative.exitApp()`); progress is saved first.
+* **Shake strength and vibration strength sliders** (Settings, 0-200%). Shake scales the picture nudge in blasts and hits; vibration scales how long each buzz lasts (0 = off).
+* **Controls editor** (Settings > CONTROLS): drag the weapon button and the ability button anywhere, drag the sticks when FIXED STICKS is on, SMALLER / BIGGER per item, RESET. LEFT-HANDED swaps the sticks and now also moves the round buttons to the left edge. Everything is saved with the settings.
+* **Tutorial** for new players (first run only; Settings > TUTORIAL replays it): move, aim and fire, shoot 3 enemies, pick up a crate, weapon and ability buttons. The hen cannot die meanwhile and SKIP ends it at any time.
+* 29 new strings translated into all 17 languages.
+
+## New in 6.2 - Smoother fights
+
+* **Sound effects are rendered once** into audio buffers (the browser does that on its own audio thread) and every shot, blast or pick-up is then a single buffer source. Before, each sound built 3-6 audio nodes on the main thread - a hundred nodes a second in a big fight. A fight now creates about 4 times fewer nodes.
+* **The picture sharpness no longer changes in the middle of a fight.** Changing it re-creates the whole canvas, a visible hitch on a phone; AUTO now waits for a calm moment (countdown, perk pick, pause, menu), at most 8 seconds.
+* **Blast budget:** only the first four blasts in one game tick draw rings and sparks; the rest still deal damage but cost no extra effects. Fewer short-lived arrays are made for drawing.
+* **HITCH LOG (Settings):** every picture that takes over 110 ms is written down with what happened right before it (crate pick-up, blast, sharpness change, save). If a freeze still happens on your phone, the log says where it came from.
+* **Android:** the web renderer and the UI thread get foreground / display priority, the WebView is a hardware layer and the app is declared a game (`appCategory="game"`), so Android treats it as a game. Nothing in the app limits the CPU (no sustained-performance mode).
+* **Honest note on threads:** the game itself (rules, enemies, drawing) is JavaScript and runs on one thread - that is how a WebView works, it cannot be split over several threads. What can run elsewhere now does: the sound rendering.
+
 ## New in 6.1 - Fixes and pictures
 
 * **CLUCK RUN tractors:** the wheels are now real 3D tyre blocks (tread, sidewall, hub) - big rear wheels, small front wheels - instead of flat discs.

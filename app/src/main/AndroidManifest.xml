@@ -19,6 +19,7 @@
 
     <application
         android:allowBackup="false"
+        android:appCategory="game"
         android:enableOnBackInvokedCallback="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,11 +30,148 @@
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden|uiMode"
             android:exported="true"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="fullSensor" />
+
+        <!-- v6.4: the launcher icon. Exactly one of these ten aliases is enabled (Icon0 by default); Settings > APP ICON switches them with
+             PackageManager.setComponentEnabledSetting. The activity itself has no launcher entry any more. -->
+        <activity-alias
+            android:name=".Icon0"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_0"
+            android:roundIcon="@mipmap/ic_launcher_0"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon1"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_1"
+            android:roundIcon="@mipmap/ic_launcher_1"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon2"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_2"
+            android:roundIcon="@mipmap/ic_launcher_2"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon3"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_3"
+            android:roundIcon="@mipmap/ic_launcher_3"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon4"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_4"
+            android:roundIcon="@mipmap/ic_launcher_4"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon5"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_5"
+            android:roundIcon="@mipmap/ic_launcher_5"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon6"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_6"
+            android:roundIcon="@mipmap/ic_launcher_6"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon7"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_7"
+            android:roundIcon="@mipmap/ic_launcher_7"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon8"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_8"
+            android:roundIcon="@mipmap/ic_launcher_8"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Icon9"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_9"
+            android:roundIcon="@mipmap/ic_launcher_9"
+            android:label="Cluck &amp; Load"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
     </application>
 </manifest>
